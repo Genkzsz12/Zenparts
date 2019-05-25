@@ -56,12 +56,10 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
     private static final int GESTURE_REQUEST = 1;
     private static final int GESTURE_WAKELOCK_DURATION = 2000;
     private static final boolean DEBUG = true;
-    private static final String KEY_CONTROL_PATH = "/proc/s1302/virtual_key";
-    private static final String FPC_CONTROL_PATH = "/sys/devices/soc/soc:fpc_fpc1020/proximity_state";
 
     // Supported scancodes
     private static final int GESTURE_C_SCANCODE = 249;
-    private static final int GESTURE_E_SCANCODE = 250;
+    private static final int GESTURE_e_SCANCODE = 250;
     private static final int GESTURE_S_SCANCODE = 251;
     private static final int GESTURE_V_SCANCODE = 252;
     private static final int GESTURE_W_SCANCODE = 253;
@@ -79,7 +77,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
      private static final int KEY_DOUBLE_TAP = 143;
      private static final int[] sSupportedGestures = new int[]{
         GESTURE_C_SCANCODE,
-        GESTURE_E_SCANCODE,
+        GESTURE_e_SCANCODE,
         GESTURE_V_SCANCODE,
         GESTURE_W_SCANCODE,
         GESTURE_S_SCANCODE,
@@ -97,7 +95,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
 
      private static final int[] sProxiCheckedGestures = new int[]{
         GESTURE_C_SCANCODE,
-        GESTURE_E_SCANCODE,
+        GESTURE_e_SCANCODE,
         GESTURE_V_SCANCODE,
         GESTURE_W_SCANCODE,
         GESTURE_S_SCANCODE,
@@ -160,10 +158,10 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
         mSettingsObserver = new SettingsObserver(mHandler);
         mSettingsObserver.observe();
         mEventHandler = new EventHandler();
-        mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        mPowerManager = context.getSystemService(PowerManager.class);
         mAudioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         mNoMan = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
+        mSensorManager = context.getSystemService(SensorManager.class);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         IntentFilter screenStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
@@ -198,9 +196,9 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
                         ActionConstants.ACTION_CAMERA);
                         doHapticFeedback();
                 break;
-            case GESTURE_E_SCANCODE:
+            case GESTURE_e_SCANCODE:
                 action = getGestureSharedPreferences()
-                        .getString(ScreenOffGesture.PREF_GESTURE_E,
+                        .getString(ScreenOffGesture.PREF_GESTURE_e,
                         ActionConstants.ACTION_MEDIA_PLAY_PAUSE);
                         doHapticFeedback();
                 break;
@@ -276,10 +274,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
         public void onSensorChanged(SensorEvent event) {
             mProxyIsNear = event.values[0] < mSensor.getMaximumRange();
             if (DEBUG) Log.d(TAG, "mProxyIsNear = " + mProxyIsNear);
-            if(Utils.fileWritable(FPC_CONTROL_PATH)) {
-                Utils.writeValue(FPC_CONTROL_PATH, mProxyIsNear ? "1" : "0");
         }
-     }
 
     @Override
         public void onAccuracyChanged(Sensor sensor, int accuracy) {

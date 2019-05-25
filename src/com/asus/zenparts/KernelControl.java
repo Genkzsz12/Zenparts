@@ -32,7 +32,6 @@ import java.io.File;
 public final class KernelControl {
 
     private static String GESTURE_PATH = "/sys/kernel/touchpanel/dclicknode";
-    public static final String SLIDER_SWAP_NODE = "/proc/s1302/key_rep";
 
     private KernelControl() {
         // this class is not supposed to be instantiated
@@ -52,10 +51,6 @@ public final class KernelControl {
      */
     public static boolean hasTouchscreenGestures() {
         return new File(GESTURE_PATH).exists();
-    }
-
-    public static boolean hasSlider() {
-        return new File(SLIDER_SWAP_NODE).exists();
     }
 
 }

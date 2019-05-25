@@ -81,18 +81,17 @@
         </activity-alias>
        <activity android:name=".KeyHandler" />
 	<activity
-            android:name=".settings.ScreenOffGestureSettings"
-			android:exported="true"
+            android:name="com.asus.zenparts.settings.ScreenOffGestureSettings"
             android:label="@string/screen_off_gesture_title">
           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+    	        <category android:name="android.intent.category.DEFAULT" />
           </intent-filter>
 	</activity>
         <activity
             android:name=".kcal.KCalSettingsActivity"
             android:exported="false"
             android:label="@string/advanced_settings_kcal">
-
             <intent-filter>
                 <action	  android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -104,7 +103,7 @@
             android:enabled="true"
             android:stopWithTask="false" />		
         <receiver android:name="com.asus.zenparts.Startup" >
-            <intent-filter android:priority="100" >
+            <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

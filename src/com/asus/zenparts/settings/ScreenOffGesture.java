@@ -56,7 +56,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
 
     public static final String PREF_GESTURE_ENABLE = "enable_gestures";
     public static final String PREF_GESTURE_C = "gesture_c";
-    public static final String PREF_GESTURE_E = "gesture_e";
+    public static final String PREF_GESTURE_e = "gesture_e";
     public static final String PREF_GESTURE_W = "gesture_w";
     public static final String PREF_GESTURE_V = "gesture_v";
     public static final String PREF_GESTURE_S = "gesture_s";
@@ -139,7 +139,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
         mEnableGestures = (SwitchPreference) prefs.findPreference(PREF_GESTURE_ENABLE);
 
         mGestureC = (Preference) prefs.findPreference(PREF_GESTURE_C);
-        mGestureDoubleSwipe = (Preference) prefs.findPreference(PREF_GESTURE_E);
+        mGestureDoubleSwipe = (Preference) prefs.findPreference(PREF_GESTURE_e);
         mGestureArrowUp = (Preference) prefs.findPreference(PREF_GESTURE_W);
         mGestureArrowDown = (Preference) prefs.findPreference(PREF_GESTURE_V);
         mGestureArrowLeft = (Preference) prefs.findPreference(PREF_GESTURE_S);
@@ -153,7 +153,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
         setupOrUpdatePreference(mGestureC, mScreenOffGestureSharedPreferences
                 .getString(PREF_GESTURE_C, ActionConstants.ACTION_CAMERA));
         setupOrUpdatePreference(mGestureDoubleSwipe, mScreenOffGestureSharedPreferences
-                .getString(PREF_GESTURE_E, ActionConstants.ACTION_MEDIA_PLAY_PAUSE));
+                .getString(PREF_GESTURE_e, ActionConstants.ACTION_MEDIA_PLAY_PAUSE));
         setupOrUpdatePreference(mGestureArrowUp, mScreenOffGestureSharedPreferences
                     .getString(PREF_GESTURE_W, ActionConstants.ACTION_TORCH));
         setupOrUpdatePreference(mGestureArrowDown, mScreenOffGestureSharedPreferences
@@ -221,7 +221,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
             settingsKey = PREF_GESTURE_C;
             dialogTitle = R.string.gesture_c_title;
         } else if (preference == mGestureDoubleSwipe) {
-            settingsKey = PREF_GESTURE_E;
+            settingsKey = PREF_GESTURE_e;
             dialogTitle = R.string.gesture_e_title;
         } else if (preference == mGestureArrowUp) {
             settingsKey = PREF_GESTURE_W;
@@ -276,7 +276,7 @@ public class ScreenOffGesture extends PreferenceFragment implements
                 .putBoolean(PREF_GESTURE_ENABLE, true).commit();
         editor.putString(PREF_GESTURE_C,
                 ActionConstants.ACTION_CAMERA).commit();
-        editor.putString(PREF_GESTURE_E,
+        editor.putString(PREF_GESTURE_e,
                 ActionConstants.ACTION_MEDIA_PLAY_PAUSE).commit();
         editor.putString(PREF_GESTURE_W,
                 ActionConstants.ACTION_TORCH).commit();

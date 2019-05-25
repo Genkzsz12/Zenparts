@@ -18,6 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <SwitchPreference
+            android:defaultValue="0"
             android:key="enable_gestures"
             android:title="@string/enable_gestures_title"
             android:persistent="false"
