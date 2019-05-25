@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 ASUS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- Advanced -->
+    <string name="advanced_settings">Zenfone Parts</string>
+    <string name="advanced_settings_summary">Extra Settings</string>
+    <string name="display_title">Display</string>
+
+    <!-- KCal -->
+    <string name="device_kcal_title">Display Color Calibration</string>
+
+    <!-- Vibrate -->
+    <string name="vibration_title">Haptic feedback</string>
+    <string name="vibration_strength_title">Strength</string>
+
+    <!-- Dirac settings -->
+    <string name="dirac_title">Mi Sound Enhancer</string>
+    <string name="dirac_summary">Optimize audio quality</string>
+    <string name="dirac_headset_title">Choose headphones type</string>
+    <string name="dirac_preset_title">Choose a preset</string>
+
+    <!-- Gesture Settings -->
+    <string name="dlg_ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="reset_message">Reset all entries to default?</string>
+	
+    <string name="category_gesture">Gestures</string>
+    <string name="screen_off_gesture_title">Zenmotions</string>
+    <string name="group_applications">Applications</string>
+    <string name="select_custom_app_title">Select custom application</string>
+    <string name="gestures_dashboard_summary">Awesome screen-off gestures</string>
+    <string name="enable_gestures_title">Enable gestures</string>
+    <string name="enable_gestures_summary">Enable screen off gestures</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="zenmotions">Zenmotions</string>
+    <string name="zenmotions_summary">Awesome screen off gestures</string>
+    <string name="gestures">Gestures</string>
+    <string name="screen_off_gestures">Screen-off gestures</string>
+    <string name="gesture_double_tap_title">Gesture Double Tap</string>
+    <string name="gesture_z_title">Gesture Z</string>	
+    <string name="gesture_s_title">Gesture S</string>
+    <string name="gesture_v_title">Gesture V</string>
+    <string name="gesture_w_title">Gesture W</string>
+    <string name="gesture_c_title">Gesture C</string>
+    <string name="gesture_e_title">Gesture e</string>
+    <string name="gesture_up_title">Gesture Swipe Up</string>
+    <string name="gesture_down_title">Gesture Swipe Down</string>
+    <string name="gesture_left_title">Gesture Swipe Left</string>
+    <string name="gesture_right_title">Gesture Swipe Right</string>
+    <string name="screen_gestures_panel_title">Gestures</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="audio_title">Audio</string>
+    <string name="dirac_headset_default">Default</string>
+    <string name="dirac_headset_earbuds">Mi Earbuds</string>
+    <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
+    <string name="dirac_headset_piston_1">Mi Piston-1</string>
+    <string name="dirac_headset_general">General</string>
+    <string name="dirac_headset_general_inear">General In-Ear</string>
+    <string name="dirac_headset_piston_basic">Basic Edition</string>
+    <string name="dirac_headset_piston_2">Mi Piston-2</string>
+    <string name="dirac_headset_piston_standard">Standard Edition</string>
+    <string name="dirac_headset_headphone">Mi Headphones</string>
+    <string name="dirac_headset_piston_youth">Youth Edition</string>
+    <string name="dirac_headset_piston_color">Color Edition</string>
+    <string name="dirac_headset_in_ear">Mi In-Ear</string>
+    <string name="dirac_headset_capsule">Mi Capsule</string>
+    <string name="dirac_headset_in_ear_pro">Mi In-Ear Pro</string>
+    <string name="dirac_headset_comfort">Mi Comfort</string>
+    <string name="dirac_headset_reduction_noise">Mi Noise Cancelling Type-C</string>
+    <string name="dirac_headset_cancelling">Mi Noise Cancelling 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">Mi Half In-Ear</string>
+    <string name="dirac_headset_in_ear2">Mi In-Ear 2</string>
+    <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
+    <string name="dirac_headset_earphone">Mi Earphones</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_default">Default</string>
+    <string name="dirac_preset_rock">Rock</string>
+    <string name="dirac_preset_jazz">Jazz</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_classical">Classical</string>
+    <string name="dirac_preset_hiphop">Hip Hop</string>
+    <string name="dirac_preset_blues">Blues</string>
+    <string name="dirac_preset_electronic">Electronic</string>
+    <string name="dirac_preset_country">Country</string>
+    <string name="dirac_preset_dance">Dance</string>
+    <string name="dirac_preset_metal">Metal</string>
+
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="microphone_gain">Microphone gain</string>
+
+    <!-- Kcal Settings -->
+    <string name="advanced_settings_kcal">Display Color Calibration</string>
+    <string name="cat_colormanagement">Color Settings</string>
+    <string name="cat_calibration">Display Calibration</string>
+
+    <string name="kcal_enabled">On</string>
+    <string name="kcal_disabled">Off</string>
+    <string name="set_on_boot">Set On Boot</string>
+    <string name="color_red">Red</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_minimum">Minimum</string>
+    <string name="saturation">Saturation</string>
+    <string name="value">Value</string>
+    <string name="contrast">Contrast</string>
+    <string name="hue">Hue</string>
+    <string name="grayscale">Grayscale Display</string>
+
+    <string name="presets_dialog_title">Select Preset</string>
+    <!-- Presets -->
+    <string name="preset_default">Default</string>
+    <string name="preset_version_1">Version 1</string>
+    <string name="preset_version_2">Version 2</string>
+    <string name="preset_version_3">Version 3</string>
+    <string name="preset_triluminous">Triluminous</string>
+    <string name="preset_deep_black_white">Deep Black and White</string>
+    <string name="preset_deep_natural">Deep Natural</string>
+    <string name="preset_cool_amoled">Cool Amoled</string>
+    <string name="preset_extreme_amoled">Extreme Amoled</string>
+    <string name="preset_warm_amoled">Warm Amoled</string>
+    <string name="preset_hybrid_mamba">Hybrid Mamba</string>
+
+    <!-- Menu -->
+    <string name="kcal_presets" translatable="false">@string/presets_dialog_title</string>
+    <string name="kcal_reset">Reset</string>
+
+    <!-- CustomSeekBarPreference -->
+    <string name="edit_value">Choose new Value</string>
+    <string name="default_value">Default Value</string>
+    <string name="edit_hint">Value between %1$d and %2$d</string>
+</resources>
