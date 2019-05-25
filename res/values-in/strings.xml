@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 ASUS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <!-- Advanced -->
+    <string name="advanced_settings">Zenfone Parts</string>
+    <string name="advanced_settings_summary">Extra Settings</string>
+    <string name="display_title">Layar</string>
+
+    <!-- KCal -->
+    <string name="device_kcal_title">Warna layar</string>
+
+    <!-- Vibrate -->
+    <string name="vibration_title">Getaran Balik</string>
+    <string name="vibration_strength_title">Kekuatan Getaran</string>
+
+    <!-- Dirac settings -->
+    <string name="dirac_title">Mi Sound Enhancer</string>
+    <string name="dirac_summary">Optimalkan kualitas audio</string>
+    <string name="dirac_headset_title">Pilih tipe headphone</string>
+    <string name="dirac_preset_title">Pilih preset</string>
+
+    <!-- Gesture Settings -->
+    <string name="dlg_ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="reset">Atur ulang</string>
+    <string name="reset_message">Kembalikan ke pengaturan awal bosku?</string>
+
+    <string name="category_gesture">Gestur</string>
+    <string name="screen_off_gesture_title">Zenmotions</string>
+    <string name="group_applications">Aplikasi</string>
+    <string name="select_custom_app_title">Pilih aplikasi modifikasi</string>
+    <string name="gestures_dashboard_summary">Gestur layar mati yang aduhai</string>
+    <string name="enable_gestures_title">Aktifkan gestur</string>
+    <string name="enable_gestures_summary">Aktifkan gestur layar mati</string>
+    <string name="gestures_title">Gestur</string>
+    <string name="zenmotions">Zenmotions</string>
+    <string name="zenmotions_summary">Gestur layar mati yang aduhai</string>
+    <string name="gestures">Gestur</string>
+    <string name="screen_off_gestures">Gestur layar mati</string>
+    <string name="gesture_double_tap_title">Gestur ketuk 2 kali</string>
+    <string name="gesture_z_title">Gestur Z</string>	
+    <string name="gesture_s_title">Gestur S</string>
+    <string name="gesture_v_title">Gestur V</string>
+    <string name="gesture_w_title">Gestur W</string>
+    <string name="gesture_c_title">Gestur C</string>
+    <string name="gesture_e_title">Gestur e</string>
+    <string name="gesture_up_title">Gestur usap ke atas</string>
+    <string name="gesture_down_title">Gestur usap ke bawah</string>
+    <string name="gesture_left_title">Gestur usap ke kiri</string>
+    <string name="gesture_right_title">Gestur usap ke kanan</string>
+    <string name="screen_gestures_panel_title">Gestur</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="audio_title">Audio</string>
+    <string name="dirac_headset_default">Bawaan</string>
+    <string name="dirac_headset_earbuds">Mi Earbuds</string>
+    <string name="dirac_headset_general_inear">In-Ear umum</string>
+    <string name="dirac_headset_piston_1">Mi Piston-1</string>
+    <string name="dirac_headset_general">Umum</string>
+    <string name="dirac_headset_general_inear">General In-Ear</string>
+    <string name="dirac_headset_piston_basic">Basic Edition</string>
+    <string name="dirac_headset_piston_2">Mi Piston-2</string>
+    <string name="dirac_headset_piston_standard">Edisi standar</string>
+    <string name="dirac_headset_headphone">Mi Headphones</string>
+    <string name="dirac_headset_piston_youth">Edisi Youth</string>
+    <string name="dirac_headset_piston_color">Edisi Warna</string>
+    <string name="dirac_headset_in_ear">Mi In-Ear</string>
+    <string name="dirac_headset_capsule">Mi Capsule</string>
+    <string name="dirac_headset_in_ear_pro">Mi In-Ear Pro</string>
+    <string name="dirac_headset_comfort">Mi Comfort</string>
+    <string name="dirac_headset_reduction_noise">Mi Noise Cancelling Type-C</string>
+    <string name="dirac_headset_cancelling">Mi Noise Cancelling 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">Mi Half In-Ear</string>
+    <string name="dirac_headset_in_ear2">Mi In-Ear 2</string>
+    <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
+    <string name="dirac_headset_earphone">Mi Earphones</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_default">Bawaan</string>
+    <string name="dirac_preset_rock">Rock</string>
+    <string name="dirac_preset_jazz">Jazz</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_classical">Classical</string>
+    <string name="dirac_preset_hiphop">Hip Hop</string>
+    <string name="dirac_preset_blues">Blues</string>
+    <string name="dirac_preset_electronic">Electronic</string>
+    <string name="dirac_preset_country">Country</string>
+    <string name="dirac_preset_dance">Dance</string>
+    <string name="dirac_preset_metal">Metal</string>
+
+    <!-- Audio amplification -->
+    <string name="headphone_gain">Headphone gain</string>
+    <string name="microphone_gain">Microphone gain</string>
+
+    <!-- Kcal Settings -->
+    <string name="advanced_settings_kcal">Kalibrasi Warna Layar</string>
+    <string name="cat_colormanagement">Pengaturan Warna</string>
+    <string name="cat_calibration">Kalibrasi Warna</string>
+    <string name="kcal_summary">Kalibrasi warna layar menggunakan KCAL</string>
+    <string name="kcal_enabled">Nyala</string>
+    <string name="kcal_disabled">Mati</string>
+    <string name="set_on_boot">Set Kcal Sesudah Boot</string>
+    <string name="color_red">Merah</string>
+    <string name="color_green">Hijau</string>
+    <string name="color_blue">Biru</string>
+    <string name="color_minimum">Minimum</string>
+    <string name="saturation">Saturasi</string>
+    <string name="value">Value</string>
+    <string name="contrast">Kontras</string>
+    <string name="hue">Rona</string>
+    <string name="grayscale">Skala Abu-Abu</string>
+
+    <string name="presets_dialog_title">Muat Preset Kcal</string>
+    <!-- Presets -->
+    <string name="preset_default">Standar</string>
+    <string name="preset_version_1">Versi 1</string>
+    <string name="preset_version_2">Versi 2</string>
+    <string name="preset_version_3">Versi 3</string>
+    <string name="preset_triluminous">Triluminus</string>
+    <string name="preset_deep_black_white">Hitam Pekat and Putih</string>
+    <string name="preset_deep_natural">Alami yang dalam</string>
+    <string name="preset_cool_amoled">Amoled Keren</string>
+    <string name="preset_extreme_amoled">Sangat Amoled</string>
+    <string name="preset_warm_amoled">Amoled Hangat</string>
+    <string name="preset_hybrid_mamba">Hybrid Mamba</string>
+
+    <!-- Menu -->
+    <string name="kcal_presets" translatable="false">@string/presets_dialog_title</string>
+    <string name="kcal_reset">Atur Ulang</string>
+
+    <!-- CustomSeekBarPreference -->
+    <string name="edit_value">Pilih Nilai Baru</string>
+    <string name="default_value">Standar Nilai</string>
+    <string name="edit_hint">Nilai Antara %1$d and %2$d</string>
+</resources>
