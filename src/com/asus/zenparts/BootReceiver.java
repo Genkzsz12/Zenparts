@@ -20,18 +20,67 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
+import android.text.TextUtils;
 
+import android.app.Activity;
+import android.content.ComponentName;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.preference.PreferenceManager;
+
+import com.asus.zenparts.KernelControl;
+import com.asus.zenparts.settings.ScreenOffGesture;
 import com.asus.zenparts.kcal.Utils;
 
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
+    private void restore(String file, boolean enabled) {
+        if (file == null) {
+            return;
+        }
+        if (enabled) {
+            FileUtils.writeValue(file, "1");
+        }
+    }
+
+    private void restore(String file, String value) {
+        if (file == null) {
+            return;
+        }
+        FileUtils.writeValue(file, value);
+    }
+	
+    private boolean getPreferenceBoolean(Context context, String key, boolean defaultValue) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(key, defaultValue);
+    }
+
+    private void enableComponent(Context context, String component) {
+        ComponentName name = new ComponentName(context, component);
+        PackageManager pm = context.getPackageManager();
+        if (pm.getComponentEnabledSetting(name)
+                == PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+            pm.setComponentEnabledSetting(name,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP);
+        }
+    }
+	
     private final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator" +
             "/vtg_level";
     private final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     private final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
     public void onReceive(Context context, Intent intent) {
-
+		
+        if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+                enableComponent(context, ScreenOffGesture.class.getName());
+                SharedPreferences screenOffGestureSharedPreferences = context.getSharedPreferences(
+                        ScreenOffGesture.GESTURE_SETTINGS, Activity.MODE_PRIVATE);
+                KernelControl.enableGestures(
+                        screenOffGestureSharedPreferences.getBoolean(
+                        ScreenOffGesture.PREF_GESTURE_ENABLE, true));
+		
         if (Settings.Secure.getInt(context.getContentResolver(), PREF_ENABLED, 0) == 1) {
             FileUtils.setValue(KCAL_ENABLE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_ENABLED, 0));
@@ -66,5 +115,6 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         FileUtils.setValue(MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MICROPHONE_GAIN, 0));
         context.startService(new Intent(context, DiracService.class));
-    }
+		}
+	}
 }

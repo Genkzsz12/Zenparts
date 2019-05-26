@@ -81,11 +81,10 @@
         </activity-alias>
        <activity android:name=".KeyHandler" />
 	<activity
-            android:name="com.asus.zenparts.settings.ScreenOffGestureSettings"
+            android:name=".ScreenOffGestureSettings"
             android:label="@string/screen_off_gesture_title">
           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-    	        <category android:name="android.intent.category.DEFAULT" />
           </intent-filter>
 	</activity>
         <activity
@@ -102,10 +101,5 @@
             android:name=".DiracService"
             android:enabled="true"
             android:stopWithTask="false" />		
-        <receiver android:name="com.asus.zenparts.Startup" >
-            <intent-filter android:priority="1000" >
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
     </application>
 </manifest>

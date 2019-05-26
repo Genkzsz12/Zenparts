@@ -19,6 +19,7 @@ package com.asus.zenparts;
 import android.os.SystemProperties;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import android.util.Log;
@@ -27,6 +28,22 @@ import java.io.FileReader;
 
 class FileUtils {
 
+    public static void writeValue(String filename, String value) {
+        if (filename == null) {
+            return;
+        }
+        try {
+            FileOutputStream fos = new FileOutputStream(new File(filename));
+            fos.write(value.getBytes());
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+	
     static boolean fileWritable(String filename) {
         return fileExists(filename) && new File(filename).canWrite();
     }
