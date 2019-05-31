@@ -81,7 +81,7 @@
         </activity-alias>
        <activity android:name=".KeyHandler" />
 	<activity
-            android:name=".ScreenOffGestureSettings"
+            android:name="com.asus.zenparts.settings.ScreenOffGestureSettings"
             android:label="@string/screen_off_gesture_title">
           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
