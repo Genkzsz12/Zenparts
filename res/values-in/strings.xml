@@ -28,7 +28,7 @@
     <string name="vibration_strength_title">Kekuatan Getaran</string>
 
     <!-- Dirac settings -->
-    <string name="dirac_title">Mi Sound Enhancer</string>
+    <string name="dirac_title">Optimalisasi Audio</string>
     <string name="dirac_summary">Optimalkan kualitas audio</string>
     <string name="dirac_headset_title">Pilih tipe headphone</string>
     <string name="dirac_preset_title">Pilih preset</string>
