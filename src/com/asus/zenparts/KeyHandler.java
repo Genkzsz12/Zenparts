@@ -39,7 +39,6 @@ import android.provider.Settings.Global;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.WindowManagerGlobal;
-import android.service.notification.ZenModeConfig;
 import com.asus.zenparts.settings.ScreenOffGesture;
 import android.os.UserHandle;
 import com.android.internal.os.AlternativeDeviceKeyHandler;
@@ -55,7 +54,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
     private static final String TAG = KeyHandler.class.getSimpleName();
     private static final int GESTURE_REQUEST = 1;
     private static final int GESTURE_WAKELOCK_DURATION = 2000;
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     // Supported scancodes
     private static final int GESTURE_C_SCANCODE = 249;
@@ -235,7 +234,7 @@ public class KeyHandler implements AlternativeDeviceKeyHandler {
             case GESTURE_SWIPE_DOWN:
                 action = getGestureSharedPreferences()
                         .getString(ScreenOffGesture.PREF_GESTURE_DOWN,
-                        ActionConstants.ACTION_VIB_SILENT);
+                        ActionConstants.ACTION_NULL);
                         doHapticFeedback();
                 break;
             case GESTURE_SWIPE_LEFT:
