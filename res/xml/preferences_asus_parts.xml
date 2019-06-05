@@ -71,8 +71,8 @@
             android:summary="@string/kcal_summary">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
-                android:targetPackage="org.lineageos.settings.kcal" />
+                android:targetClass="com.asus.zenparts.kcal.KCalSettingsActivity"
+                android:targetPackage="com.asus.zenparts.kcal" />
         </Preference>	
     </PreferenceCategory>
 	
