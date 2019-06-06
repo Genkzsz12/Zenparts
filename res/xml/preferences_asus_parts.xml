@@ -74,22 +74,7 @@
                 android:targetClass="com.asus.zenparts.kcal.KCalSettingsActivity"
                 android:targetPackage="com.asus.zenparts.kcal" />
         </Preference>	
-    </PreferenceCategory>
-	
-    <PreferenceCategory
-        android:title="@string/category_gesture">	
-        <Preference
-        android:key="gestures"
-        android:title="@string/zenmotions"
-        android:icon="@drawable/ic_gestures"
-        android:summary="@string/zenmotions_summary"
-        android:persistent="false">
-            <intent 
-			android:action="android.intent.action.MAIN"
-            android:targetPackage="com.asus.zenparts"
-            android:targetClass="com.asus.zenparts.settings.ScreenOffGestureSettings" />
-        </Preference>	
-    </PreferenceCategory>
+    </PreferenceCategory>	
 	
     <PreferenceCategory
         android:key="vibration"
