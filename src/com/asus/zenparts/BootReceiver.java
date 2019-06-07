@@ -32,6 +32,9 @@ import com.asus.zenparts.KernelControl;
 import com.asus.zenparts.settings.ScreenOffGesture;
 import com.asus.zenparts.kcal.Utils;
 
+import com.asus.zenparts.SensorsDozeService;
+import com.asus.zenparts.FileUtils;
+
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
     private void restore(String file, boolean enabled) {
