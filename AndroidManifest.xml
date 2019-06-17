@@ -71,26 +71,22 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/advanced_settings_summary" />
         </activity>
-        <activity
-            android:name=".gestures.ScreenOffGestureSettings"
-			android:exported="true"
-            android:label="@string/zenmotions"
-			android:theme="@style/DeviceSettings">
+       <activity android:name=".KeyHandler" />
+	<activity
+            android:name="com.asus.zenparts.settings.ScreenOffGestureSettings"
+            android:label="@string/screen_off_gesture_title">
           <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <action android:name="android.intent.action.MAIN" />
           </intent-filter>
-        </activity>
-        <service android:name="com.asus.zenparts.gestures.SensorsDozeService"
+	</activity>
+        <service android:name="com.asus.zenparts.SensorsDozeService"
                  android:permission="SensorsDozeService">
         </service>
         <activity
-            android:name=".gestures.TouchscreenGesturePreferenceActivity"
+            android:name="com.asus.zenparts.TouchscreenGesturePreferenceActivity"
 			android:exported="true"
             android:label="@string/ambient_display_gestures_title"
             android:theme="@style/DeviceSettings">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".kcal.KCalSettingsActivity"
@@ -101,4 +97,28 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <receiver android:name="com.asus.zenparts.Startup" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+	<service
+            android:name="com.asus.zenparts.dirac.DiracTileService"
+            android:icon="@drawable/dirac_qs_tile_icon"
+            android:label="@string/dirac_qs_tile_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <!-- Dirac Sounds -->
+        <activity
+            android:name="com.asus.zenparts.dirac.DiracActivity"
+            android:label="@string/dirac_title">
+            <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>

@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.asus.zenparts.util;
+package com.asus.zenparts.utils;
 
 import android.content.Context;
 import android.content.Intent;

@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.asus.zenparts;
+package com.asus.zenparts.utils;
 
 import android.app.Activity;
 import android.app.ActivityManagerNative;
@@ -43,8 +43,6 @@ import android.view.InputDevice;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.WindowManagerGlobal;
-
-import com.android.internal.policy.IKeyguardDismissCallback;
 
 import java.net.URISyntaxException;
 
@@ -144,7 +142,7 @@ public class Action {
                     }
                     startActivity(context, intent);
                 } catch (ActivityNotFoundException e) {
-                    Log.e("aospActions:", "No activity to handle assist long press action.", e);
+                    Log.e("gzospActions:", "No activity to handle assist long press action.", e);
                 }
                 return;
             } else if (action.equals(ActionConstants.ACTION_VIB)) {
@@ -233,7 +231,7 @@ public class Action {
                 try {
                     intent = Intent.parseUri(action, 0);
                 } catch (URISyntaxException e) {
-                    Log.e("aospActions:", "URISyntaxException: [" + action + "]");
+                    Log.e("gzospActions:", "URISyntaxException: [" + action + "]");
                     return;
                 }
                 startActivity(context, intent);

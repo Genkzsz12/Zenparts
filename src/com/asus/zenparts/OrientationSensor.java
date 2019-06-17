@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package om.asus.zenparts.gestures;
+package com.asus.zenparts;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -150,4 +150,4 @@ public class OrientationSensor implements SensorEventListener {
             mEnabled = false;
         }
     }
-}
+} 

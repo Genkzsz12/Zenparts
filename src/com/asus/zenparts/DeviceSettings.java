@@ -57,6 +57,7 @@ public class DeviceSettings extends PreferenceFragment implements
     final static String PREF_MICROPHONE_GAIN = "microphone_gain";
     private static final String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
+    private Preference mAmbientPref;
     private SecureSettingCustomSeekBarPreference mTorchBrightness;
     private VibrationSeekBarPreference mVibrationStrength;
     private Preference mKcal;
@@ -88,6 +89,16 @@ public class DeviceSettings extends PreferenceFragment implements
             return true;
         });
 
+	mAmbientPref = findPreference("ambient_display_gestures");
+        mAmbientPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getContext(), TouchscreenGesturePreferenceActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
+		
         mHeadphoneGain = (SecureSettingCustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);
         mHeadphoneGain.setOnPreferenceChangeListener(this);
 

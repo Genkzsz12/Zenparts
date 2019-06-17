@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package om.asus.zenparts.gestures;
+package com.asus.zenparts;
 
 import android.app.ActionBar;
 import android.content.Context;

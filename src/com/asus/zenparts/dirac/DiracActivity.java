@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Slimroms
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,31 +14,20 @@
  * limitations under the License.
  */
 
-package om.asus.zenparts.gestures;
+package com.asus.zenparts.dirac;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.preference.PreferenceActivity;
 
-public class ScreenOffGestureSettings extends Activity {
+public class DiracActivity extends PreferenceActivity {
+
+    private static final String TAG_DIRAC = "dirac";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new ScreenOffGesture()).commit();
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+                new DiracSettingsFragment(), TAG_DIRAC).commit();
     }
 }
