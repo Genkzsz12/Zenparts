@@ -15,71 +15,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory
-        android:key="torch"
-        android:title="@string/torch_title">
-
-        <com.asus.zenparts.preferences.SecureSettingCustomSeekBarPreference
-            android:defaultValue="100"
-            android:key="torch_brightness"
-            android:max="255"
-            app:min="1"
-            android:title="@string/torch_brightness_title" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="vibration"
-        android:title="@string/vibration_title">
-
-        <com.asus.zenparts.preferences.VibrationSeekBarPreference
-            android:defaultValue="80"
-            android:key="vibration_strength"
-            android:max="100"
-            app:min="1"
-            app:units="%"
-            android:title="@string/vibration_strength_title" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="display"
-        android:title="@string/display_title">
-
-        <Preference
-            android:key="device_kcal"
-            android:persistent="false"
-            android:icon="@drawable/ic_kcal"
-            android:title="@string/device_kcal_title"
-            android:summary="@string/kcal_enabled_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
-                android:targetPackage="org.lineageos.settings.kcal" />
-        </Preference>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/category_gesture">	
-        <Preference
-        android:key="gestures"
-        android:title="@string/zenmotions"
-        android:icon="@drawable/ic_gestures"
-        android:summary="@string/zenmotions_summary"
-        android:persistent="false">
-            <intent 
-			android:action="android.intent.action.MAIN"
-            android:targetPackage="com.asus.zenparts"
-            android:targetClass="com.asus.zenparts.settings.ScreenOffGestureSettings" />
-        </Preference>	
-        <PreferenceScreen
-                 android:key="ambient_display_gestures"
-                 android:fragment="com.asus.zenparts.TouchscreenGesturePreferenceActivity"
-                 android:summary="@string/ambient_display_gestures_summary"
-                 android:title="@string/ambient_display_gestures_title"
-                 android:icon="@drawable/ic_ambient" />
-    </PreferenceCategory>
-	
+    <!-- Audio -->
     <PreferenceCategory
         android:key="audio"
         android:title="@string/audio_title">
@@ -97,7 +33,8 @@
             android:max="20"
             app:min="-10"
             android:title="@string/microphone_gain" />
-
+			
+    <!-- Dirac -->
     <Preference
         android:key="dirac_settings"
         android:title="@string/dirac_settings_title"
@@ -108,5 +45,71 @@
                 android:targetPackage="com.asus.zenparts"
                 android:targetClass="com.asus.zenparts.dirac.DiracActivity" />
     </Preference>
+    </PreferenceCategory>
+  
+	<!-- Kcal -->	
+    <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+        <Preference
+            android:key="device_kcal"
+            android:persistent="false"
+            android:icon="@drawable/ic_kcal"
+            android:title="@string/device_kcal_title"
+            android:summary="@string/kcal_enabled_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.kcal.KCalSettingsActivity"
+                android:targetPackage="org.lineageos.settings.kcal" />
+        </Preference>
+    </PreferenceCategory>
+
+    <!-- Gesture/Zenmotions -->
+    <PreferenceCategory
+        android:title="@string/category_gesture">	
+        <Preference
+        android:key="gestures"
+        android:title="@string/zenmotions"
+        android:icon="@drawable/ic_gestures"
+        android:summary="@string/zenmotions_summary"
+        android:persistent="false">
+            <intent 
+			android:action="android.intent.action.MAIN"
+            android:targetPackage="com.asus.zenparts"
+            android:targetClass="com.asus.zenparts.settings.ScreenOffGestureSettings" />
+        </Preference>
+		
+    <!-- Ambient Gestures-->		
+        <PreferenceScreen
+                 android:key="ambient_display_gestures"
+                 android:fragment="com.asus.zenparts.TouchscreenGesturePreferenceActivity"
+                 android:summary="@string/ambient_display_gestures_summary"
+                 android:title="@string/ambient_display_gestures_title"
+                 android:icon="@drawable/ic_ambient" />
+    </PreferenceCategory>
+
+    <!-- Torch -->
+    <PreferenceCategory
+        android:key="torch"
+        android:title="@string/torch_title">
+        <com.asus.zenparts.preferences.SecureSettingCustomSeekBarPreference
+            android:defaultValue="100"
+            android:key="torch_brightness"
+            android:max="255"
+            app:min="1"
+            android:title="@string/torch_brightness_title" />
+    </PreferenceCategory>
+
+    <!-- Vibrate -->
+    <PreferenceCategory
+        android:key="vibration"
+        android:title="@string/vibration_title">
+        <com.asus.zenparts.preferences.VibrationSeekBarPreference
+            android:defaultValue="80"
+            android:key="vibration_strength"
+            android:max="100"
+            app:min="1"
+            app:units="%"
+            android:title="@string/vibration_strength_title" />
     </PreferenceCategory>
 </PreferenceScreen>

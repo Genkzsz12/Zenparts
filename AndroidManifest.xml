@@ -50,27 +50,30 @@
         <activity android:name=".gestures.KeyHandler" />
 
         <activity
-            android:name=".DeviceSettingsActivity"
-            android:exported="false"
-            android:icon="@drawable/ic_asus"
-            android:label="@string/advanced_settings"
-            android:launchMode="singleTask">
+            android:name="com.asus.zenparts.DeviceSettingsActivity"
+            android:label="@string/advanced_settings" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+		<action android:name="com.android.settings.action.IA_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
-
-            <meta-data
-                android:name="com.android.settings.dismiss"
-                android:value="9,13,30" />
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.system" />
             <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_asus" />
+            <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/advanced_settings_summary" />
         </activity>
+        <activity-alias
+            android:name="com.asus.zenparts.DeviceSettings"
+            android:label="@string/advanced_settings"
+            android:targetActivity="DeviceSettingsActivity" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
        <activity android:name=".KeyHandler" />
 	<activity
             android:name="com.asus.zenparts.settings.ScreenOffGestureSettings"
@@ -98,7 +101,7 @@
             </intent-filter>
         </activity>
         <receiver android:name="com.asus.zenparts.Startup" >
-            <intent-filter android:priority="100" >
+            <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
